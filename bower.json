@@ -1,0 +1,20 @@
+{
+  "name": "angular2-typescript-gulp-skeleton",
+  "description": "Angular2 Gulp Bower Typescript and Express",
+  "main": "dist/libs/server.js",
+  "authors": [
+    "Marco Ancona"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

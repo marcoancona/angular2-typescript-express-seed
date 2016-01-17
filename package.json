@@ -1,0 +1,42 @@
+{
+  "name": "angular2-typescript-gulp-skeleton",
+  "version": "1.0.0",
+  "description": "Angular2 Typescript Express Stylus Gulp Bower",
+  "main": "dist/libs/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Angular2", "Typescript", "Express", "Stylus", "Gulp", "Bower"],
+  "author": "Marco Ancona",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-beta.1",
+    "es6-promise": "3.0.2",
+    "es6-shim": "0.33.3",
+    "express": "4.13.3",
+    "gulp-concat": "2.6.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "0.19.16",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "bower": "^1.7.2",
+    "del": "2.2.0",
+    "gulp": "3.9.0",
+    "gulp-bower": "0.0.11",
+    "gulp-concat": "2.6.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-stylus": "^2.2.0",
+    "gulp-tslint": "^4.3.0",
+    "gulp-typescript": "2.10.0",
+    "gulp-util": "^3.0.7",
+    "node-notifier": "^4.4.0",
+    "nodemon": "^1.8.1",
+    "run-sequence": "1.1.5",
+    "stylus": "^0.53.0",
+    "tslint": "^3.2.1",
+    "typescript": "^1.7.5"
+  }
+}
