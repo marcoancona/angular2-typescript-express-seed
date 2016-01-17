@@ -4,13 +4,13 @@ var port: number = process.env.PORT || 3000;
 var app = express();
 
 
-var publicDir = path.join(__dirname, '../public/');
+var publicDir = path.join(__dirname, '../../public/');
 
 /* Static serving of client artifacts */
 app.use('/app/',
 	express.static(path.join(publicDir, 'app')));
-app.use('/css/',
-	express.static(path.join(publicDir, 'css')));
+app.use('/style/',
+	express.static(path.join(publicDir, 'style')));
 app.use('/libs/',
 	express.static(path.join(publicDir, 'libs')));
 app.use('/views/',

@@ -94,7 +94,6 @@ gulp.task('compile:server', ['tslint:client'], function () {
 		.pipe(ts(tsProject));
 
 	tsResult.js
-		.pipe(concat('server.js'))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/libs'));
 });
@@ -127,7 +126,7 @@ gulp.task('compile:client', ['tslint:client'], function(){
 		.pipe(ts(tsProject));
 	return tsResult.js
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dist/public/app'));
+		.pipe(gulp.dest('dist/public'));
 });
 
 gulp.task('compile:views', function(){
@@ -154,7 +153,7 @@ gulp.task('compile:stylus', function(finished) {
 		exit(err);
 		exit = function() {}; /// make sure to call only once, just to be future-proof and double-safe
 	})
-	.pipe(gulp.dest('dist/public/css/'))
+	.pipe(gulp.dest('dist/public/style/'))
 	.on('end', function() {
 		exit();
 	});
@@ -178,7 +177,7 @@ gulp.task('compile', function(callback) {
 
 gulp.task('server:start', function() {
 	nodemon({
-		script: 'dist/libs/server.js',
+		script: 'dist/libs/src/server.js',
 		watch: 'dist/libs',
 		env: { 'NODE_ENV': 'development' }
 	});
