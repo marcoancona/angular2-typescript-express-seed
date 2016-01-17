@@ -15,14 +15,6 @@ app.use('/libs/',
 	express.static(path.join(publicDir, 'libs')));
 app.use('/views/',
 	express.static(path.join(publicDir, 'views')));
-// app.use('/services/',
-// 	express.static(path.join(publicDir, 'services')));
-// app.use('/img/',
-// 	express.static(path.join(publicDir, 'img')));
-// app.use('/widgets/',
-// 	express.static(path.join(publicDir, 'widgets')));
-// app.use('/doc/',
-// 	express.static(path.join(publicDir, 'doc')));
 
 app.get('/', function(req, res) {
 	res.sendFile(path.join(publicDir, 'index.html'));

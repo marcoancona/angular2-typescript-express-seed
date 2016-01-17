@@ -6,7 +6,6 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
-    "noExternalResolve": false
-  }
+    "noImplicitAny": false
+    }
 }

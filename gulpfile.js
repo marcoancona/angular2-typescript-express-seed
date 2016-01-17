@@ -75,14 +75,25 @@ function tslintReporter(output, file, options) {
 	});
 }
 
+gulp.task('tslint:client', function () {
+	return gulp.src('client/app/**/*.ts')
+		.pipe(tsLintConfigured()).pipe(tslint.report(tslintReporter, {emitError: false}));
+});
+
+gulp.task('tslint:server', function () {
+	return gulp.src('server/src/**/*.ts')
+		.pipe(tsLintConfigured()).pipe(tslint.report(tslintReporter, {emitError: false}));
+});
+
+
 // SERVER
-gulp.task('compile:server', function () {
+gulp.task('compile:server', ['tslint:client'], function () {
 	var tsProject = ts.createProject('server/tsconfig.json');
-	var tsResult = gulp.src('server/src/**/*.ts')
+	var tsResult = gulp.src('server/**/*.ts')
 		.pipe(sourcemaps.init())
-		.pipe(tsLintConfigured()).pipe(tslint.report(tslintReporter, {emitError: false}))
 		.pipe(ts(tsProject));
-	return tsResult.js
+
+	tsResult.js
 		.pipe(concat('server.js'))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/libs'));
@@ -101,8 +112,7 @@ var jsNPMDependencies = [
 	'angular2/bundles/router.dev.js'
 ];
 
-
-gulp.task('compile:client', function(){
+gulp.task('compile:client', ['tslint:client'], function(){
 	// Dependencies
 	var mappedPaths = jsNPMDependencies.map(function (file) {
 		return path.resolve('node_modules', file);
@@ -112,7 +122,7 @@ gulp.task('compile:client', function(){
 
 	// Source files
 	var tsProject = ts.createProject('client/tsconfig.json');
-	var tsResult = gulp.src('client/app/**/*.ts')
+	var tsResult = gulp.src('client/**/*.ts')
 		.pipe(sourcemaps.init())
 		.pipe(ts(tsProject));
 	return tsResult.js

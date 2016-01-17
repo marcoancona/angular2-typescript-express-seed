@@ -1,10 +1,18 @@
-# Angular2 Beta with Gulp, Bower, lint, Typescript, and Express  
+# Angular2 Beta with Gulp, Bower, Lint, Typescript, and Express  
 
+## Quick start
+Make sure `npm` is installed on your machine.
 
-Getting Started, grab the dependencies with:
+Grad the dependencies with:
 
 `npm install`
 
 then run
 
 `gulp compile && gulp develop`
+
+Browse to `http://localhost:3000` to load the application.
+This skeleton app uses [nodemon](http://nodemon.io/) for server live-reload on file change.
+Any change in client-side files (.ts, .html, .styl) also triggers the appropriate compiler while the server is running with `gulp develop`.
+
+To clean the build, delete the `dist` folder or run `gulp clean`.
