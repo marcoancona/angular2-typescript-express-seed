@@ -95,7 +95,7 @@ gulp.task('compile:server', ['tslint:client'], function () {
 
 	tsResult.js
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dist/libs'));
+		.pipe(gulp.dest('dist/server'));
 });
 
 
@@ -177,7 +177,7 @@ gulp.task('compile', function(callback) {
 
 gulp.task('server:start', function() {
 	nodemon({
-		script: 'dist/libs/src/server.js',
+		script: 'dist/server/src/server.js',
 		watch: 'dist/libs',
 		env: { 'NODE_ENV': 'development' }
 	});
