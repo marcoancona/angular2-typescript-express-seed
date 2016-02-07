@@ -1,0 +1,32 @@
+html
+
+	head
+		title Angular2 Skeleton
+		base(href="/")
+
+		// 1. Load libraries
+		script(src="libs/angular2/bundles/angular2-polyfills.js")
+		script(src="libs/systemjs/dist/system.src.js")
+		script(src="libs/rxjs/bundles/Rx.js")
+		script(src="libs/angular2/bundles/angular2.dev.js")
+		script(src="libs/angular2/bundles/router.dev.js")
+
+		link(rel="stylesheet" type="text/css" href="style/all.css")
+
+		// 2. Configure SystemJS
+		script(type='text/javascript').
+			System.config({
+				packages: {
+					app: {
+						format: 'register',
+						defaultExtension: 'js'
+					}
+				}
+			});
+			System.import('app/bootstrap')
+						.then(null, console.error.bind(console));
+
+	
+	// 3. Display the application
+	body
+		my-app Loading...

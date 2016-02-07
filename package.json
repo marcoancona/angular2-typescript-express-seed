@@ -1,7 +1,7 @@
 {
   "name": "angular2-typescript-gulp-skeleton",
   "version": "1.0.0",
-  "description": "Angular2 Typescript Express Stylus Gulp Bower",
+  "description": "Angular2 Typescript Express Stylus Jade Gulp Bower",
   "main": "dist/libs/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,15 @@
     "type": "git",
     "url": "https://github.com/marcoancona/angular2-typescript-express-seed"
   },
-  "keywords": ["Angular2", "Typescript", "Express", "Stylus", "Gulp", "Bower"],
+  "keywords": [
+    "Angular2",
+    "Typescript",
+    "Express",
+    "Stylus",
+    "Gulp",
+    "Bower",
+		"Jade"
+  ],
   "author": "Marco Ancona",
   "license": "MIT",
   "dependencies": {
@@ -29,6 +37,7 @@
     "gulp": "3.9.0",
     "gulp-bower": "0.0.11",
     "gulp-concat": "2.6.0",
+    "gulp-jade": "^1.1.0",
     "gulp-nodemon": "^2.0.6",
     "gulp-sourcemaps": "1.6.0",
     "gulp-stylus": "^2.2.0",

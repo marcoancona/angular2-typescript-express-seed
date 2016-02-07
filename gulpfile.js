@@ -11,6 +11,8 @@ var gutil = require('gulp-util');
 var nodemon = require('gulp-nodemon');
 var notifier = require('node-notifier');
 var bower = require('gulp-bower');
+var jade = require('gulp-jade');
+
 
 var tsLintConfigured = function() {
 	return tslint({
@@ -130,8 +132,14 @@ gulp.task('compile:client', ['tslint:client'], function(){
 });
 
 gulp.task('compile:views', function(){
-	var copyViews = gulp.src('client/**/*.html')
-		.pipe(gulp.dest('dist/public/'));
+	gulp.src([
+		'client/**/*.jade',
+	])
+	.pipe(jade({
+		locals: {
+		} /* could provide global substitutions here */
+	}))
+	.pipe(gulp.dest('dist/public/'));
 });
 
 gulp.task('compile:stylus', function(finished) {
@@ -162,7 +170,7 @@ gulp.task('compile:stylus', function(finished) {
 gulp.task('develop', ['server:start'], function(){
 	gulp.watch('server/src/**/*.ts', ['compile:server']);
 	gulp.watch('client/app/**/*.ts', ['compile:client']);
-	gulp.watch('client/**/*.html', ['compile:views']);
+	gulp.watch('client/**/*.jade', ['compile:views']);
 	gulp.watch('client/**/*.styl', ['compile:stylus']);
 });
 
