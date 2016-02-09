@@ -136,8 +136,6 @@ gulp.task('compile:views', function(){
 		'client/**/*.jade',
 	])
 	.pipe(jade({
-		locals: {
-		} /* could provide global substitutions here */
 	}))
 	.pipe(gulp.dest('dist/public/'));
 });
@@ -147,7 +145,7 @@ gulp.task('compile:stylus', function(finished) {
 	/// Note: Correct async running
 	gulp.src([
 		'client/style/main.styl',
-		'client/src/**/*.styl'
+		'client/app/**/*.styl'
 		])
 	.pipe(concat('all.styl'))
 	.pipe(stylus())
