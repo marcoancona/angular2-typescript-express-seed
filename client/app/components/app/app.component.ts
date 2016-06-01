@@ -1,8 +1,8 @@
 import {Component} from "angular2/core";
 import {Router, RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 
-import {HomeComponent} from "../home/HomeComponent";
-import {AboutComponent} from "../about/AboutComponent";
+import {HomeComponent} from "../home/home.component";
+import {AboutComponent} from "../about/about.component";
 
 @RouteConfig([
 	{path: '/', component: HomeComponent, as: 'Home'},
