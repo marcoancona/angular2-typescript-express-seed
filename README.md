@@ -3,11 +3,15 @@
 ## Quick start
 Make sure `npm` is installed on your machine.
 
-Grad the dependencies with:
+Grab the dependencies with:
 
 `npm install`
 
-then run
+Install `gulp` globally:
+
+`npm install --global gulp-cli`
+
+Finally, compile and run the app:
 
 `gulp compile && gulp develop`
 
