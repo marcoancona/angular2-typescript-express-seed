@@ -33,7 +33,7 @@ var tsLintConfigured = function() {
 				'no-duplicate-variable': true,
 				'no-eval': true,
 				'no-switch-case-fall-through': true,
-				'no-trailing-comma': true,
+				'trailing-comma': true,
 				'no-trailing-whitespace': true,
 				'no-unreachable': true,
 				'no-unused-expression': true,
