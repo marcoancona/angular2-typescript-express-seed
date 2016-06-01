@@ -37,7 +37,6 @@ var tsLintConfigured = function() {
 				'no-trailing-whitespace': true,
 				'no-unreachable': true,
 				'no-unused-expression': true,
-				// 'no-unused-variable': false,	// disabled. Very painful during development.
 				'no-use-before-declare': true,
 				'one-line': [true,
 					'check-open-brace',
@@ -46,9 +45,6 @@ var tsLintConfigured = function() {
 				'semicolon': true,
 				'triple-equals': true,
 				'use-strict': true,
-/*				'variable-name': [true,
-					'allow-leading-underscore'
-				], */
 				'whitespace': [true,
 					'check-branch',
 					'check-decl',
