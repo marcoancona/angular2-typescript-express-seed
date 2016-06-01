@@ -7,7 +7,7 @@ Grab the dependencies with:
 
 `npm install`
 
-Install `gulp` globally:
+Install `gulp` globally (might require `sudo`):
 
 `npm install --global gulp-cli`
 
