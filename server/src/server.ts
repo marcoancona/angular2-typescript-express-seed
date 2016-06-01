@@ -16,7 +16,7 @@ app.use('/libs/',
 app.use('/views/',
 	express.static(path.join(publicDir, 'views')));
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
 	res.sendFile(path.join(publicDir, 'index.html'));
 });
 
